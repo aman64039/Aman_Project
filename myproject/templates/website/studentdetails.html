@@ -1,0 +1,19 @@
+{% extends 'account/main.html' %}
+
+{% block body %}
+
+	<table width="2" border="2">
+		{% for i in data %}
+		{% if i.student%}
+		<p>Name</p> {{i.studentname}}<br>
+		<p>Email</p> {{i.student.email}}<br>
+		{% else %}
+		<p>Name</p> {{i.trainername}}<br>
+		<p>Email</p> {{i.trainer.email}}<br>
+		<p>Charges <p> {{i.charges}}
+		{%endif%}
+		{% endfor %}
+	</table>
+
+
+{% endblock %}

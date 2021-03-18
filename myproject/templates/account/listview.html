@@ -1,0 +1,13 @@
+{% extends 'account/main.html' %}
+
+{% block body %}
+
+	<table width="2" border="2">
+		{% for i in data %}
+		<p>Name</p> {{i.name}}<br>
+		<p>Age</p> {{i.age}}
+		{% endfor %}
+	</table>
+
+
+{% endblock %}

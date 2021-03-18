@@ -1,0 +1,22 @@
+{% extends 'account/main.html' %}
+
+{% block body %}
+<h1>This is Create View </h1>
+
+{% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+<form method="post" action="login">
+	{% csrf_token %}
+  <label for="username">UserName:</label><br>
+  <input type="text" name="username"><br>
+  <label for="password">Password:</label><br>
+  <input type="password" name="password"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+{% endblock %}

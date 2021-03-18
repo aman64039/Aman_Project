@@ -1,0 +1,12 @@
+{% extends 'account/main.html' %}
+
+{% block body %}
+<h1>This is Create View </h1>
+
+<form method="post" action="create_view_form">
+	{% csrf_token %}
+	{{form.as_p}}
+  <input type="submit" value="Submit">
+</form> 
+
+{% endblock %}

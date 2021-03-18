@@ -1,0 +1,24 @@
+{% extends 'account/main.html' %}
+
+{% block body %}
+<h1>This is Signup View </h1>
+
+{% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+<form method="post" action="">
+	{% csrf_token %}
+  <label for="username">Email</label><br>
+  <input type="email" name="email"><br>
+  <label for="password">Password:</label><br>
+  <input type="password" name="password"><br><br>
+  <label for="password">Conferm Password:</label><br>
+  <input type="password" name="password1"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+{% endblock %}
